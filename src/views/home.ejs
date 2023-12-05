@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Visualización Datos</title>
+</head>
+
+<body>
+    <header>
+        <div>
+            <div>
+                <a href="/">
+                    <h4>
+                        PRUEBA TÉCNICA: ETAPA I
+                    </h4>
+                </a>
+            </div>
+            <div>
+                <nav>
+                    <ul>
+                        <a class="elements" href="/">
+                            <div>
+                                <i class="fa-solid fa-house"></i>
+                            </div>
+                            <div>
+                                <span>Inicio</span>
+                            </div>
+                        </a>
+                    </ul>
+                    <ul>
+                        <a class="elements" href="#">
+                            <div>
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+                            <div>
+                                <span>Nuestra Empresa</span>
+                            </div>
+                        </a>
+                    </ul>
+                    <ul>
+                        <a class="elements" href="#">
+                            <div>
+                                <i class="fa-solid fa-user-plus"></i>
+                            </div>
+                            <div>
+                                <span>Registrarse</span>
+                            </div>
+                        </a>
+                    </ul>
+                    <ul>
+                        <a class="elements" href="#">
+                            <div>
+                                <i class="fa-solid fa-right-to-bracket"></i>
+                            </div>
+                            <div>
+                                <span>Iniciar Sesión</span>
+                            </div>
+                        </a>
+                    </ul>
+                    <ul>
+                        <a class="elements" href="#">
+                            <div>
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <span>Contáctanos</span>
+                            </div>
+                        </a>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div>
+            <h1>Tabla de Datos</h1>
+        </div>
+        <div >
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Porcentaje</th>
+                        <th>Veces Votado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% data.forEach(data=> { %>
+                        <tr>
+                            <td>
+                                <%= data.id %>
+                            </td>
+                            <td>
+                                <%= data.name %>
+                            </td>
+                            <td>
+                                <%= data.percentage %>
+                            </td>
+                            <td>
+                                <%= data.timesVoted %>
+                            </td>
+                        </tr>
+                        <% }); %>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <nav>
+                <ul>
+                    <h4>
+                        PRUEBA TÉCNICA: ETAPA I
+                    </h4>
+                </ul>
+                <ul>
+                    <h4>Sebastian Orrego 2023</h4>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+
+</html>
